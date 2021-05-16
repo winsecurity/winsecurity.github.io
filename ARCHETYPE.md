@@ -223,4 +223,4 @@ python3 PsExec.py Administrator@10.10.10.27 cmd
 ```
 enter password and u will get shell
 
-![[/Pasted image 20210516192232.png]]
+![alt root](/Pasted image 20210516192232.png)

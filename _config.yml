@@ -14,5 +14,5 @@ include:
   - PULL_REQUEST_TEMPLATE.md
   - ARCHETYPE.md
   - index.md
-
+  - gdb_cheatsheet.md
 theme: jekyll-theme-hacker

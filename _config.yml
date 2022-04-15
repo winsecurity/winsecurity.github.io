@@ -15,4 +15,5 @@ include:
   - ARCHETYPE.md
   - index.md
   - gdb_cheatsheet.md
+  - XXE.md
 theme: jekyll-theme-hacker

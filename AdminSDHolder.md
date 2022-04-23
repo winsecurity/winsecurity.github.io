@@ -84,7 +84,7 @@ namespace ADACL101
 
 ```
 
-![Image](/Pasted image 20220423182151.png)
+
 
 ## Manually triggering SDProp
 

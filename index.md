@@ -4,3 +4,4 @@
 # [GDB Cheatsheet](/gdb_cheatsheet.md)
 # [HackTheBox Archetype Walkthrough](/ARCHETYPE.md)
 # [XML eXternal Entities Cheatsheet](/XXE.md)
+# [Domain Persistence via AdminSDHolder](/Adding ourselves to AdminSDHolder.md)

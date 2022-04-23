@@ -16,4 +16,5 @@ include:
   - index.md
   - gdb_cheatsheet.md
   - XXE.md
+  - Adding ourselves to AdminSDHolder.md
 theme: jekyll-theme-hacker

@@ -1,6 +1,6 @@
 # Welcome to my Blog 
 
-# [Finding DCSync Users with C#](/DCSync users with csharp.md)
+# [Finding DCSync Users with CSharp](/DCSync users with csharp.md)
 # [Domain Persistence via AdminSDHolder](/AdminSDHolder.md)
 # [SQL Injection Cheatsheet](/SQL injection Manual.md)
 # [GDB Cheatsheet](/gdb_cheatsheet.md)

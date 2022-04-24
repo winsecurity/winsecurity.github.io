@@ -1,5 +1,6 @@
 # Welcome to my Blog 
 
+# [CSharp Marshalling](/C# Marshalling.md)
 # [Finding DCSync Users with CSharp](/DCSync users with csharp.md)
 # [Domain Persistence via AdminSDHolder](/AdminSDHolder.md)
 # [SQL Injection Cheatsheet](/SQL injection Manual.md)

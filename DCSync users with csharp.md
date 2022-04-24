@@ -75,11 +75,11 @@ I have already made a dictionary
 ```csharp
 Hashtable ht = new Hashtable();
 ht.Add("DS-Replication-Get-Changes", "1131f6aa-9c07-11d1-f79f-00c04fc2dcd2");
- ht.Add("DS-Replication-Get-Changes-All", "1131f6ad-9c07-11d1-f79f-00c04fc2dcd2");
-  ht.Add("DS-Replication-Get-Changes-In-Filtered-Set", "89e95b76-444d-4c62-991a-0facbeda640c");
-  ht.Add("DS-Replication-Manage-Topology", "1131f6ac-9c07-11d1-f79f-00c04fc2dcd2");
-  ht.Add("DS-Replication-Monitor-Topology", "f98340fb-7c5b-4cdb-a00b-2ebdfa115a96");
-  ht.Add("DS-Replication-Synchronize", "1131f6ab-9c07-11d1-f79f-00c04fc2dcd2");
+ht.Add("DS-Replication-Get-Changes-All", "1131f6ad-9c07-11d1-f79f-00c04fc2dcd2");
+ht.Add("DS-Replication-Get-Changes-In-Filtered-Set", "89e95b76-444d-4c62-991a-0facbeda640c");
+ht.Add("DS-Replication-Manage-Topology", "1131f6ac-9c07-11d1-f79f-00c04fc2dcd2");
+ht.Add("DS-Replication-Monitor-Topology", "f98340fb-7c5b-4cdb-a00b-2ebdfa115a96");
+ht.Add("DS-Replication-Synchronize", "1131f6ab-9c07-11d1-f79f-00c04fc2dcd2");
 ```
 
 Next we gonna bind to our domain and get all objects
@@ -90,11 +90,11 @@ DirectorySearcher ds = new DirectorySearcher();
      ds.SearchRoot = de;
 
 foreach (SearchResult sr in ds.FindAll())
+{
+ try
   {
- 		try
-             {
         DirectoryEntry temp = sr.GetDirectoryEntry();
-          AuthorizationRuleCollection arc = temp.ObjectSecurity.GetAccessRules(true, true, typeof(NTAccount));
+        AuthorizationRuleCollection arc = temp.ObjectSecurity.GetAccessRules(true, true, typeof(NTAccount));
 
 ```
 
@@ -118,9 +118,9 @@ foreach (ActiveDirectoryAccessRule a in arc)
      //sw.WriteLine(a.AccessControlType);
    //sw.WriteLine(a.ActiveDirectoryRights);
 	sw.WriteLine();
-}
-}
- }
+	}
+     }
+   }
  }
 }
 ```

@@ -7,6 +7,7 @@ include:
   - CONTRIBUTING.md
   - CSharp Marshalling.md
   - DCSync users with csharp.md
+  - Winapi with CSharp Examples.md
   - README.md
   - LICENSE.md
   - COPYING.md

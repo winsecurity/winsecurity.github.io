@@ -34,7 +34,7 @@ bool result = GetUserNameW(sb,100);
 Console.WriteLine(sb.ToString());
 ```
 
-### shi2_type
+## shi2_type
 This is member of "SHARE_INFO_2" structure. This field indicates the type of the share.
 ```csharp
 OrderedDictionary SHARE_TYPES = new OrderedDictionary();

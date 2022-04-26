@@ -123,3 +123,52 @@ for (int i = 0; i < totalentries; i++) {
 
 }
 ```
+
+## GetSystemInfo
+```csharp
+[StructLayout(LayoutKind.Sequential)]
+public struct DUMMYSTRUCTNAME {
+  public UInt16 wProcessorArchitecture;
+  public UInt16 wReserved;
+}
+
+[StructLayout(LayoutKind.Sequential)]
+public struct SYSTEM_INFO {
+
+  public DUMMYUNIONNAME du;
+
+  [StructLayout(LayoutKind.Explicit)]
+  public struct DUMMYUNIONNAME {
+	// the member     DWORD dwOemId;
+	// became deprecated 
+	
+    [FieldOffset(0)]
+    public DUMMYSTRUCTNAME ds;
+
+  }
+
+  public UInt32 dwPageSize;
+  public IntPtr lpMinimumApplicationAddress;
+  public IntPtr lpMaximumApplicationAddress;
+  public UInt32 dwActiveProcessorMask;
+  public UInt32 dwNumberOfProcessors;
+  public UInt32 dwProcessorType;
+  public UInt32 dwAllocationGranularity;
+  public UInt16 wProcessorLevel;
+  public UInt16 wProcessorRevision;
+}
+
+
+[DllImport("Kernel32.dll")]
+public static extern void GetSystemInfo(
+  ref SYSTEM_INFO lpSystemInfo
+);
+
+SYSTEM_INFO s2 = new SYSTEM_INFO();
+
+GetSystemInfo(ref s2);
+Console.WriteLine(s2.dwNumberOfProcessors);
+Console.WriteLine(s2.du.ds.wProcessorArchitecture);
+Console.WriteLine(s2.dwProcessorType);
+```
+

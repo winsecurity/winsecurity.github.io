@@ -172,3 +172,26 @@ Console.WriteLine(s2.du.ds.wProcessorArchitecture);
 Console.WriteLine(s2.dwProcessorType);
 ```
 
+## RegistryOpenKeyExW
+```csharp
+[DllImport("Advapi32.dll")]
+
+public static extern int RegOpenKeyExW(
+  UIntPtr hKey,
+  [param: MarshalAs(UnmanagedType.LPWStr)] string lpSubKey,
+  UInt32 ulOptions,
+  UInt32 samDesired,
+  ref UIntPtr phkResult
+);
+
+UIntPtr phkResult = UIntPtr.Zero;
+UIntPtr hkcu = new UIntPtr(0x80000001)
+int result = RegOpenKeyExW(
+	hkcu,
+	@"Software\7-Zip",
+	0,
+	131097,
+	ref phkResult
+);
+// phkResult can be passed to other registry functions to read or write operations
+```

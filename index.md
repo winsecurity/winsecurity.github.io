@@ -8,5 +8,5 @@
 # [GDB Cheatsheet](/gdb_cheatsheet.md)
 # [HackTheBox Archetype Walkthrough](/ARCHETYPE.md)
 # [XML eXternal Entities Cheatsheet](/XXE.md)
-
+# [JWT Attacks: Unverified Signature](/JWT Unverified Signature.md)
 
